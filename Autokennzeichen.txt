@@ -1,0 +1,570 @@
+A 	Augsburg
+AA 	Ostalbkreis
+AB 	Aschaffenburg
+ABG 	Altenburger Land
+ABI 	Anhalt-Bitterfeld
+AC 	Aachen
+AE 	Vogtlandkreis
+AIC 	Aichach/Friedberg
+AK 	Altenkirchen Westerwald
+ALF 	Hildesheim
+AM 	Amberg, Stadt
+AN 	Ansbach
+ANA 	Erzgebirgskreis
+AÖ 	Altötting
+AP 	Weimarer Land
+APD 	Weimarer Land
+ARN 	Ilm-Kreis
+ART 	Kyffhäuser Kreis
+AS 	Amberg-Sulzbach
+ASL 	Salzlandkreis
+ASZ 	Erzgebirgskreis
+AU 	Erzgebirgskreis
+AUR 	Aurich
+AW 	Ahrweiler
+AZ 	Alzey-Worms
+AZE 	Anhalt-Bitterfeld
+
+
+B 	Berlin
+BA 	Bamberg
+BAD 	Baden-Baden, Stadt
+BAR 	Barnim
+BB 	Böblingen
+BBG 	Salzlandkreis
+BC 	Biberach Riß
+BED 	Mittelsachsen
+BGL 	Berchtesgadener Land
+BI 	Bielefeld, Stadt
+BID 	Marburg-Biedenkopf
+BIN 	Mainz-Bingen
+BIR 	Birkenfeld Nahe-Kreis, Idar Oberstein, Stadt
+BIT 	Bitburg-Prüm
+BIW 	Bautzen
+BK 	Börde
+BKS 	Bernkastel-Wittlich
+BL 	Zollernalbkreis
+BLB 	Siegen-Wittgenstein
+BLK 	Burgenland
+BM 	Rhein-Erft-Kreis
+BN 	Bonn, Stadt
+BNA 	Leipzig
+BO 	Bochum, Stadt
+BÖ 	Börde
+BOR 	Borken
+BOT 	Bottrop, Stadt
+BRA 	Wesermarsch
+BRB 	Brandenburg, Stadt
+BRG 	Jerichower Land
+BRL 	Goslar
+BRV 	Rotenburg (Wümme)
+BS 	Braunschweig, Stadt
+BT 	Bayreuth
+BTF 	Anhalt-Bitterfeld
+BÜD 	Wetteraukreis
+BÜS 	Konstanz, Gemeinde Büsingen am Hochrhein
+BZ 	Bautzen
+
+
+C 	Chemnitz, Stadt
+CAS 	Recklinghausen
+CB 	Cottbus
+CE 	Celle
+CHA 	Cham
+CLP 	Cloppenburg
+CLZ 	Goslar
+CO 	Coburg
+COC 	Cochem-Zell
+COE 	Coesfeld
+CUX 	Cuxhaven
+CW 	Calw
+
+
+D 	Düsseldorf, Stadt
+DA 	Darmstadt
+DAH 	Dachau
+DAN 	Lüchow-Dannenberg
+DAU 	Daun
+DD 	Dresden, Stadt
+DE 	Dessau-Roßlau, Stadt
+DEG 	Deggendorf
+DEL 	Delmenhorst, Stadt
+DGF 	Dingolfing-Landau
+DH 	Diepolz
+DI 	Darmstadt-Dieburg
+DIN 	Wesel
+DL 	Mittelsachsen
+DLG 	Dillingen a. d. Donau
+DM 	Demmin
+DN 	Düren
+DO 	Dortmund, Stadt
+DON 	Donau-Ries in Donauwörth
+DU 	Duisburg, Stadt
+DUD 	Göttingen
+DÜW 	Bad Dürkheim Weinstraße
+DW 	Sächsische Schweiz-Osterzgebirge
+DZ 	Nordsachsen
+
+
+E 	Essen, Stadt
+EA 	Eisenach, Stadt
+EB 	Nordsachsen
+EBE 	Ebersberg
+ECK 	Rendsburg-Eckernförde
+ED 	Erding
+EE 	Elbe-Elster
+EF 	Erfurt, Stadt
+EI 	Eichstätt
+EIC 	Eichsfeld
+EIL 	Mansfeld-Südharz
+EIN 	Northeim
+EIS 	Saale-Holzland-Kreis
+EL 	Emsland
+EM 	Emmendingen
+EMD 	Emden
+EMS 	Rhein-Lahn-Kreis
+EN 	Ennepe-Ruhr-Kreis
+ER 	Erlangen, Stadt
+ERB 	Odenwaldkreis
+ERH 	Erlangen-Höchstädt
+ERZ 	Erzgebirgskreis
+ES 	Esslingen Neckar
+ESW 	Werra-Meissner-Kreis
+EU 	Euskirchen
+
+
+F 	Frankfurt/Main, Stadt
+FB 	Wetteraukreis in Friedberg Hessen
+FD 	Fulda
+FDS 	Freudenstadt
+FF 	Frankfurt (Oder), Stadt
+FFB 	Fürstenfeldbruck
+FG 	Mittelsachsen
+FL 	Flensburg
+FLÖ 	Mittelsachsen
+FN 	Bodenseekreis
+FO 	Forchheim
+FR 	Freiburg Breisgau
+FRG 	Freyung-Grafenau
+FRI 	Friesland
+FS 	Freising
+FT 	Frankenthal Pfalz, Stadt
+FTL 	Sächsische Schweiz-Osterzgebirge
+FÜ 	Fürth
+
+
+G 	Gera, Stadt
+GA 	Altmarkkreis Salzwedel
+GAN 	Northeim
+GAP 	Garmisch-Partenkirchen
+GC 	Zwickau
+GE 	Gelsenkirchen, Stadt
+GER 	Germersheim
+GF 	Gifhorn
+GG 	Groß-Gerau
+GHA 	Leipzig
+GHC 	Wittenberg
+GI 	Gießen
+GL 	Rheinisch-Bergischer-Kreis
+GLA 	Recklinghausen
+GM 	Oberbergischer Kreis
+GN 	Main-Kinzig-Kreis
+GNT 	Jerichower Land
+GÖ 	Göttingen
+GOA 	Rhein-Hunsrück-Kreis
+GP 	Göppingen
+GR 	Görlitz
+GRH 	Meißen
+GRM 	Leipzig
+GRZ 	Greiz
+GS 	Goslar
+GT 	Gütersloh
+GTH 	Gotha
+GÜ 	Güstrow
+GZ 	Günzburg
+
+
+H 	Hannover
+HA 	Hagen, Stadt
+HAL 	Halle, Stadt
+HAM 	Hamm, Stadt
+HAS 	Haßberge
+HB 	Hansestadt Bremen
+HBN 	Hildburghausen
+HBS 	Harz
+HC 	Mittelsachsen
+HD 	Heidelberg
+HDH 	Heidenheim Brenz
+HDL 	Börde
+HE 	Helmstedt
+HEF 	Hersfeld-Rothenburg
+HEI 	Dithmarschen
+HER 	Herne, Stadt
+HET 	Mansfeld-Südharz
+HF 	Herford
+HG 	Hochtaunuskreis
+HGW 	Hansestadt Greifswald
+HH 	Freie und Hansestadt Hamburg
+HHM 	Burgenlandkreis
+HI 	Hildesheim
+HIG 	Eichsfeld
+HK 	Landkreis Heidekreis
+HL 	Hansestadt Lübeck
+HM 	Hameln-Pyrmont
+HMÜ 	Göttingen
+HN 	Heilbronn Neckar
+HO 	Hof
+HOG 	Kassel
+HOL 	Holzminden
+HOM 	Saarpfalz-Kreis außer Stadt St. Ingbert (IGB)
+HOT 	Zwickau
+HP 	Bergstraße
+HR 	Schwalm-Eder-Kreis
+HRO 	Hansestadt Rostock
+HS 	Heinsberg
+HSK 	Hochsauerlandkreis
+HST 	Hansestadt Stralsund, Stadt
+HU 	Hanau
+HV 	Stendal
+HVL 	Havelland
+HWI 	Hansestadt Wismar
+HX 	Höxter
+HY 	Bautzen
+HZ 	Harz
+
+
+IGB 	St. Ingbert, Stadt
+IK 	Ilm-Kreis
+IL 	Ilm-Kreis
+IN 	Ingolstadt, Stadt
+IZ 	Steinburg
+
+
+J 	Jena, Stadt
+JE 	Wittenberg
+JL 	Jerichower Land
+JÜL 	Düren
+JM 	Jomrich
+
+
+K 	Köln, Stadt
+KA 	Karlsruhe
+KB 	Waldeck-Frankenberg
+KC 	Kronach
+KE 	Kempten (Allgäu), Stadt
+KEH 	Kelheim
+KF 	Kaufbeuren, Stadt
+KG 	Bad Kissingen
+KH 	Bad Kreuznach
+KI 	Kiel
+KIB 	Donnersbergkreis
+KL 	Kaiserslautern
+KLE 	Kleve
+KLZ 	Altmarkkreis Salzwedel
+KM 	Bautzen
+KN 	Konstanz
+KO 	Koblenz, Stadt
+KÖT 	Anhalt-Bitterfeld
+KR 	Krefeld, Stadt
+KS 	Kassel
+KT 	Kitzingen
+KU 	Kulmbach
+KÜN 	Hohenlohekreis
+KUS 	Kusel
+KYF 	Kyffhäuserkreis
+
+
+L 	Leipzig
+LA 	Landshut
+LAU 	Nürnberger Land
+LB 	Ludwigsburg
+LBS 	Saale-Orla-Kreis
+LD 	Landau, Stadt
+LDK 	Lahn-Dill-Kreis in Wetzlar, Kreis
+LDS 	Dahme-Spreewald
+LER 	Leer
+LEV 	Leverkusen, Stadt
+LG 	Lüneburg
+LI 	Lindau (Bodensee)
+LIF 	Lichtenfels
+LIP 	Lippe
+LL 	Landsberg am Lech
+LM 	Limburg-Weilburg
+LÖ 	Lörrach
+LÖB 	Görlitz
+LOS 	Oder-Spree
+LP 	Soest
+LRO 	Landkreis Rostock
+LSZ 	Unstrut-Hainich-Kreis
+LU 	Ludwigshafen Rhein
+LÜN 	Unna
+LWL 	Ludwigslust
+
+
+M 	München
+MA 	Mannheim, Stadt
+MAB 	Erzgebirgskreis
+MB 	Miesbach
+MD 	Magdeburg, Stadt
+ME 	Mettmann
+MEI 	Meißen
+MEK 	Erzgebirgskreis
+MER 	Saalekreis
+MG 	Mönchengladbach, Stadt
+MGN 	Schmalkalden-Meiningen
+MH 	Mülheim a. d. Ruhr, Stadt
+MHL 	Unstrut-Hainich-Kreis
+MI 	Minden-Lübbecke
+MIL 	Miltenberg
+MK 	Märkischer Kreis
+MKK 	Main-Kinzing-Kreis
+ML 	Mansfeld-Südharz
+MM 	Memmingen, Stadt
+MN 	Unterallgäu
+MO 	Wesel
+MOL 	Märkisch-Oderland
+MOS 	Neckar-Odenwald-Kreis
+MQ 	Saalekreis
+MR 	Marburg-Biedenkopf
+MS 	Münster, Stadt
+MSH 	Mansfeld-Südharz
+MSP 	Main-Spessart
+MST 	Mecklenburg-Strelitz
+MTK 	Main-Taunus-Kreis
+MTL 	Leipzig
+MÜ 	Mühldorf a. Inn
+MÜR 	Müritz
+MW 	Mittelsachsen
+MYK 	Mayen-Koblenz
+MZ 	Mainz
+MZG 	Merzig-Wadern
+
+
+N 	Nürnberg, Stadt
+NB 	Neubrandenburg, Stadt
+ND 	Neuburg-Schrobenhausen
+NDH 	Nordhausen
+NE 	Rhein-Kreis Neuss
+NEA 	Neustadt a. d. Aisch
+NEB 	Burgenlandkreis
+NES 	Rhön-Grabfeld
+NEW 	Neustadt a.d. Waldnaab
+NF 	Nordfriesland
+NH 	Sonneberg
+NI 	Nienburg (Weser)
+NK 	Neunkirchen Saar
+NM 	Neumarkt i.d. OPf.
+NMB 	Burgenlandkreis
+NMS 	Neumünster, Stadt
+NOH 	Grafschaft Bentheim
+NOL 	Görlitz
+NOM 	Northeim
+NOR 	Aurich
+NR 	Neuwied Rhein
+NU 	Neu-Ulm
+NW 	Neustadt Weinstraße, Stadt
+NWM 	Nordwestmecklenburg
+
+
+OA 	Oberallgäu
+OAL 	Ostallgäu
+OB 	Oberhausen, Stadt
+OBG 	Stendal
+OC 	Börde
+OD 	Stormarn
+OE 	Olpe
+OF 	Offenbach am Main
+OG 	Ortenaukreis
+OH 	Ostholstein
+OHA 	Osterode am Harz
+OHV 	Oberhavel
+OHZ 	Osterholz
+OK 	Börde
+OL 	Oldenburg (Oldenburg)
+OPR 	Ostprignitz-Ruppin
+OS 	Osnabrück
+OSL 	Oberspreewald-Lausitz
+OVL 	Vogtlandkreis
+OZ 	Nordsachsen
+
+
+P 	Potsdam, Stadt
+PA 	Passau
+PAF 	Pfaffenhofen a.d. Ilm
+PAN 	Rottal-Inn
+PB 	Paderborn
+PCH 	Parchim
+PE 	Peine
+PF 	Pforzheim
+PI 	Pinneberg
+PIR 	Sächsische Schweiz-Osterzgebirge
+PL 	Vogtlandkreis
+PLÖ 	Plön Holstein
+PM 	Potsdam-Mittelmark
+PN 	Saale-Orla-Kreis
+PR 	Prignitz
+PRÜ 	Bitburg-Prüm
+PS 	Pirmasens
+
+
+QFT 	Saalekreis
+QLB 	Harz
+
+
+R 	Regensburg
+RA 	Rastatt
+RC 	Vogtlandkreis
+RD 	Rendsburg-Eckernförde
+RE 	Recklinghausen
+REG 	Regen
+RG 	Meißen
+RH 	Roth
+RI 	Schaumburg
+RIE 	Meißen
+RL 	Mittelsachsen
+RO 	Rosenheim
+ROW 	Rotenburg (Wümme)
+RP 	Rhein-Pfalz-Kreis
+RS 	Remscheid, Stadt
+RSL 	Dessau-Roßlau, Stadt
+RT 	Reutlingen
+RU 	Saalfeld-Rudolstadt
+RÜD 	Rheingau-Taunus-Kreis
+RÜG 	Rügen
+RV 	Ravensburg
+RW 	Rottweil
+RZ 	Herzogtum Lauenburg
+
+
+S 	Stuttgart, Stadt
+SAB 	Trier-Saarburg
+SAD 	Schwandorf
+SAW 	Altmarkkreis Salzwedel
+SB 	Saarbrücken, Stadt und Stadtverband außer Völklingen, Stadt (VK)
+SBK 	Salzlandkreis
+SC 	Schwabach, Stadt
+SCZ 	Saale-Orla-Kreis
+SDH 	Kyffhäuserkreis
+SDL 	Stendal
+SE 	Segeberg
+SEB 	Sächsische Schweiz-Osterzgebirge
+SFT 	Salzlandkreis
+SG 	Solingen, Stadt
+SGH 	Mansfeld-Südharz
+SHA 	Schwäbisch Hall
+SHG 	Schaumburg in Stadthagen
+SHK 	Saale-Holzland-Kreis
+SHL 	Suhl, Stadt
+SI 	Siegen-Wittgenstein
+SIG 	Sigmaringen
+SIM 	Rhein-Hunsrück-Kreis
+SK 	Saalekreis
+SL 	Schleswig-Flensburg
+SLF 	Saalfeld-Rudolfstadt
+SLK 	Salzlandkreis
+SLN 	Altenburger Land
+SLS 	Saarlouis
+SLÜ 	Main-Kinzig-Kreis
+SLZ 	Wartburgkreis
+SM 	Schmalkalden-Meiningen
+SN 	Schwerin, Stadt
+SO 	Soest
+SÖM 	Sömmerda
+SOK 	Saale-Orla-Kreis
+SON 	Sonneberg
+SP 	Speyer, Stadt
+SPN 	Spree-Neiße
+SR 	Straubing
+SRO 	Saale-Holzland-Kreis
+ST 	Steinfurt
+STA 	Starnberg
+STD 	Stade
+STL 	Erzgebirgskreis
+SU 	Rhein-Sieg-Kreis
+SÜW 	Südliche Weinstraße
+SW 	Schweinfurt
+SZ 	Salzgitter, Stadt
+SZB 	Erzgebirgskreis
+
+
+TBB 	Main-Tauber-Kreis
+TDO 	Nordsachsen
+TF 	Teltow-Fläming
+TG 	Nordsachsen
+TIR 	Tirschenreuth
+TO 	Nordsachsen
+TÖL 	Bad Tölz-Wolfratshausen
+TR 	Trier, Stadt und Trier-Saarburg
+TS 	Traunstein
+TÜ 	Tübingen
+TUT 	Tuttlingen
+
+
+
+UE 	Uelzen
+UH 	Unstrut-Hainich-Kreis
+UL 	Ulm Donau
+UM 	Uckermark
+UN 	Unna
+USI 	Hochtaunuskreis
+
+
+V 	Vogtlandkreis
+VB 	Vogelsbergkreis
+VEC 	Vechta
+VER 	Verden
+VG 	Vorpommern-Greifswald
+VIE 	Viersen
+VK 	Völklingen, Stadt
+VR 	Vorpommern-Rügen
+VS 	Schwarzwald-Baar-Kreis
+
+
+W 	Wuppertal, Stadt
+WAF 	Warendorf
+WAK 	Wartburgkreis
+WAN 	Herne, Stadt
+WAT 	Bochum, Stadt
+WB 	Wittenberg
+WBS 	Eichsfeld
+WDA 	Zwickau
+WE 	Weimar, Stadt
+WEL 	Limburg-Weilburg
+WEN 	Weiden i. d. OPf., Stadt
+WES 	Wesel
+WF 	Wolfenbüttel
+WHV 	Wilhelmshaven, Stadt
+WI 	Wiesbaden, Stadt
+WIT 	Ennepe-Ruhr-Kreis
+WIL 	Bernkastel-Wittlich
+WL 	Harburg
+WM 	Weilheim-Schongau in Weilheim i. OB
+WMS 	Börde
+WN 	Rems-Murr-Kreis
+WND 	St. Wendel
+WO 	Worms, Stadt
+WOB 	Wolfsburg, Stadt
+WOH 	Kassel
+WR 	Harz
+WSF 	Burgenlandkreis
+WST 	Ammerland in Westerstede
+WSW 	Görlitz
+WT 	Waldshut in Waldshut-Tiengen
+WTM 	Wittmund
+WÜ 	Würzburg
+WUG 	Weißenburg-Gunzenhausen
+WUN 	Wunsiedel i. Fichtelgebirge
+WUR 	Leipzig
+WW 	Westerwald in Montabaur
+WZ 	Wetzlar, Stadt
+WZL 	Börde
+
+
+Z 	Zwickau
+ZE 	Anhalt-Bitterfeld
+ZEL 	Cochem-Zell
+ZI 	Görlitz
+ZP 	Erzgebirgskreis
+ZR 	Greiz
+ZW 	Zweibrücken, Stadt
+ZZ 	Burgenlandkreis
