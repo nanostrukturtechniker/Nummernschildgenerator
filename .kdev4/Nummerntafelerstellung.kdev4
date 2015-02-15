@@ -1,3 +1,6 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00,\x00N\x00u\x00m\x00m\x00e\x00r\x00n\x00t\x00a\x00f\x00e\x00l\x00e\x00r\x00s\x00t\x00e\x00l\x00l\x00u\x00n\x00g)
+
 [CMake]
 Build Directory Count=1
 Current Build Directory Index=0
@@ -9,7 +12,7 @@ Build Type=Debug
 CMake Binary=file:///usr/bin/cmake
 Environment Profile=
 Extra Arguments=
-Install Directory=
+Install Directory=file:///usr/local
 
 [Defines And Includes][Compiler]
 Name=GCC
@@ -26,13 +29,24 @@ Name=nummerntafelerstellung
 Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
-Arguments=/home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/Zeichen.txt /home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/PNG/  /home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/Zulassungsbezirke.txt
+Arguments=-c /home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/config.ini --characterFile /home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/Zeichen.txt
+Debugger Shell=
 Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00,\x00N\x00u\x00m\x00m\x00e\x00r\x00n\x00t\x00a\x00f\x00e\x00l\x00e\x00r\x00s\x00t\x00e\x00l\x00l\x00u\x00n\x00g\x00\x00\x00,\x00n\x00u\x00m\x00m\x00e\x00r\x00n\x00t\x00a\x00f\x00e\x00l\x00e\x00r\x00s\x00t\x00e\x00l\x00l\x00u\x00n\x00g)
 Dependency Action=Build
+Display Demangle Names=true
+Display Static Members=true
 EnvironmentGroup=
 Executable=file:///home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/
 External Terminal=konsole --noclose --workdir %workdir -e %exe
+GDB Path=
 Project Target=Nummerntafelerstellung,nummerntafelerstellung
+Remote GDB Config Script=
+Remote GDB Run Script=
+Remote GDB Shell Script=
+Start With=ApplicationOutput
 Use External Terminal=true
 Working Directory=
 isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
