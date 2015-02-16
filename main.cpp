@@ -59,8 +59,8 @@ int main(int argc, char **argv) {
     ("test,t", po::value<int>(&i)->default_value(666), "Test int")
     ;
 
-    //po::options_description config_file_options;
-    //config_file_options.add(options);
+    po::options_description config_file_options;
+    config_file_options.add(options);
 
     po::variables_map vm;
     po::store(po::parse_command_line(argc, argv, options), vm);
@@ -74,15 +74,10 @@ int main(int argc, char **argv) {
 
    
     //Check if config file is readable
-    ifstream ifs(configFilePath.c_str());
-    //if (ifs)  po::store(po::parse_config_file(ifs, config_file_options), vm);
+    ifstream ifs( vm["config"].as<string>().c_str());
+    if (ifs)  po::store(po::parse_config_file(ifs, config_file_options), vm);
 
-    //po::notify(vm);    
-    
-    characterFilePath = "/home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/Zeichen.txt";
-    PNGFilePath = "/home/joerg/Eigene_Dateien/Programmieren/Nummerntafelerstellung/PNG/";
-    zulassungsbezirkFilePath = "/home/joerg//Eigene_Dateien/Programmieren/Nummerntafelerstellung/Autokennzeichen.txt";
-    
+    po::notify(vm);    
     
     ifstream characterFile(characterFilePath.c_str());
     ifstream zulassungsbezirkFile(zulassungsbezirkFilePath.c_str());
