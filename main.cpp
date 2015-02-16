@@ -23,6 +23,8 @@ class Character{
 
 
 vector<Character> characters;
+vector<string> zulassungsbezirke;
+
 
 //All sizes are in tenth of mm
 const int widthNumberplate=5200;
@@ -80,38 +82,60 @@ int main(int argc, char **argv) {
     po::notify(vm);    
     
     ifstream characterFile(characterFilePath.c_str());
-    ifstream zulassungsbezirkFile(zulassungsbezirkFilePath.c_str());
     
-    
-    
+    //Read in all possible characters, empty lines are allowed
     string s;	
-    istringstream iss(); 
     string line;
     while(!characterFile.eof())
     {
 	Character actChar;
-
+	//Get the new line and split it via the stringstream
 	getline(characterFile, line);
-
-	characterFile >> s;					//Read in the character
+	istringstream iss(line);
+	//Skip if the line is too short for anything
+	iss >> s;					//Read in the character
 	actChar.character = s.c_str()[0];
-	characterFile >> s;					//Read in the filename
+	iss >> s;					//Read in the filename
 	actChar.filename =  PNGFilePath + s;
-	characterFile >> s;					//Read in the umlaut
+	iss >> s;					//Read in the umlaut
 	actChar.umlaut = (s.compare("true")) ? true : false;
-	characterFile >> s;					//Read in the number
+	iss >> s;					//Read in the number
 	actChar.number = (s.compare("true")) ? true : false;
-	characterFile >> s;					//Read in the allowed as first char
+	iss >> s;					//Read in the allowed as first char
 	actChar.allowedAsFirstCharacter = (s.compare("true")) ? true : false;
-	
-	//cout << actChar.character<<endl;
-	
+
 	//Read in the file and scale it
 	actChar.imgScaled = imread(actChar.filename);
-	resize(actChar.imgScaled, actChar.imgScaled,Size(0,0),scale,scale,CV_INTER_CUBIC);
-	characters.push_back(actChar);
-	
+	//Resize and add only if read was successfull
+	if (actChar.imgScaled.cols>0)
+	{
+	    resize(actChar.imgScaled, actChar.imgScaled,Size(0,0),scale,scale,CV_INTER_CUBIC);
+	    characters.push_back(actChar);
+	}
+
     }
+    
+ 
+    ifstream zulassungsbezirkFile(zulassungsbezirkFilePath.c_str());
+  
+    //Read in the Zulassungsbezirke, They only contain a short string
+    while(!zulassungsbezirkFile.eof())
+    {
+	Character actChar;
+	//Same as above
+	getline(zulassungsbezirkFile, line);
+	//Skip if the line is too short for anything
+	if (line.length()>=1)
+	{
+	    istringstream iss(line);
+	    iss >> s;			//Read in the Zulassungsbezirk, skip the rest.
+	    zulassungsbezirke.push_back(s);
+	}
+    }
+    
+    
+    
+    
     
     return 0;
 }
