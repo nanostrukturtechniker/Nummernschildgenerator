@@ -31,7 +31,8 @@ const int widthNumberplate=5200;
 const int heightNumberplate=1100;
 const int heightCharacters=750;
 const int witdhCharacters=405;
-const int witdhNumbers=385;
+const int heightNumbers=750;
+const int widthNumbers=385;
 
 const int startOfFirstCharX=540;
 const int distOfCharsX=90;
@@ -39,8 +40,56 @@ const int distOfCharsX=90;
 const int widthDienstsiegel=655;
 const int widthSpacer=270;
 
+const int maxCharactersOnPlate=8;
 
 double scale = 0.1;
+
+
+string getCharWithoutUmlaut()
+{
+    Character actChar;
+    do{
+	actChar = characters[rand()%characters.size()];
+    }while (actChar.umlaut||actChar.number);
+    return string(1,actChar.character);
+}
+
+string getNumber(bool firstNumber=false)
+{
+    Character actNumber;
+    do{
+	do{
+	    actNumber = characters[rand()%characters.size()];
+	}while (actNumber.number==false);
+    }while((actNumber.allowedAsFirstCharacter==false)&&(firstNumber));
+    return string(1,actNumber.character);
+}
+
+
+string getErkennungsnummer()
+{
+    string actErkennungsnummer;
+    if (rand()%2==0) // one character
+    {
+	actErkennungsnummer = getCharWithoutUmlaut();
+    }else{//Two characters
+	actErkennungsnummer = getCharWithoutUmlaut();
+	actErkennungsnummer += getCharWithoutUmlaut();
+    }
+    return actErkennungsnummer;
+}
+
+
+string getErkennungsziffer(int maxLength)
+{
+    //Get the max length and limit it to 4.
+    maxLength=rand()%maxLength;
+    maxLength=(maxLength>4)? 4: maxLength;
+
+    string actErkennungsziffer=getNumber(true);
+    for(int i=1;i<maxLength;i++) actErkennungsziffer+=getNumber(false);
+    return actErkennungsziffer;
+}
 
 int main(int argc, char **argv) {
     
@@ -48,8 +97,8 @@ int main(int argc, char **argv) {
     string PNGFilePath;
     string zulassungsbezirkFilePath;
     string configFilePath;
-    
-    int i=-1;
+    string backgroundImgPath;
+    int images=-1;
    
     po::options_description options("Allowed options");
     options.add_options()
@@ -58,7 +107,8 @@ int main(int argc, char **argv) {
     ("pathToPNGs", po::value<string>(&PNGFilePath)->required(), "sets the path to the PNG files.")
     ("zulassungsbezirkFile", po::value<string>(&zulassungsbezirkFilePath)->required(), "sets the path to the file containing the informations about the Zulassungsbezirke.")
     ("config,c", po::value<string>(&configFilePath)->default_value("config.ini"), "name of the configuration file")
-    ("test,t", po::value<int>(&i)->default_value(666), "Test int")
+    ("background,b", po::value<string>(&backgroundImgPath)->required(), "The image used as background, normally containing an empty licence plate.")
+    ("images,i", po::value<int>(&images)->required(), "The amount of images to be produced.")
     ;
 
     po::options_description config_file_options;
@@ -98,18 +148,24 @@ int main(int argc, char **argv) {
 	iss >> s;					//Read in the filename
 	actChar.filename =  PNGFilePath + s;
 	iss >> s;					//Read in the umlaut
-	actChar.umlaut = (s.compare("true")) ? true : false;
+	actChar.umlaut = (s.compare("true")==0);
 	iss >> s;					//Read in the number
-	actChar.number = (s.compare("true")) ? true : false;
+	actChar.number = (s.compare("true")==0);
 	iss >> s;					//Read in the allowed as first char
-	actChar.allowedAsFirstCharacter = (s.compare("true")) ? true : false;
+	actChar.allowedAsFirstCharacter = (s.compare("true")==0);
 
 	//Read in the file and scale it
 	actChar.imgScaled = imread(actChar.filename);
 	//Resize and add only if read was successfull
 	if (actChar.imgScaled.cols>0)
 	{
-	    resize(actChar.imgScaled, actChar.imgScaled,Size(0,0),scale,scale,CV_INTER_CUBIC);
+	    //Check if number or notify
+	    if (actChar.number)
+	    {
+		resize(actChar.imgScaled, actChar.imgScaled,Size(scale*widthNumbers,scale*heightNumbers));
+	    }else{
+		resize(actChar.imgScaled, actChar.imgScaled,Size(scale*witdhCharacters,scale*heightCharacters));
+	    }
 	    characters.push_back(actChar);
 	}
 
@@ -136,6 +192,22 @@ int main(int argc, char **argv) {
     
     
     
+    //Now, we should have everything and we can open our backgrund image and scale it.
+    Mat imgBackground = imread(backgroundImgPath);
+    resize(imgBackground,imgBackground,Size(scale*widthNumberplate,scale*heightNumberplate));
+    
+    
+    for(int i=0;i<images;i++)
+    {
+	//Get the Zulassungsbezirk
+	string actZulassungsbezirk = zulassungsbezirke[rand() % zulassungsbezirke.size()];
+	string actErkennungsnummer = getErkennungsnummer();
+	string actErkennungsziffer = getErkennungsziffer(maxCharactersOnPlate-actZulassungsbezirk.length()-actErkennungsnummer.length());
+	
+	string actPlate = actZulassungsbezirk+"-"+actErkennungsnummer+" "+actErkennungsziffer;
+	
+	cout << actPlate<<endl;
+    }
     
     return 0;
 }
