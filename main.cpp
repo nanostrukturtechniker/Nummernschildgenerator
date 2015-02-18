@@ -40,7 +40,7 @@ const int distOfCharsX=90;
 const int widthDienstsiegel=655;
 const int widthSpacer=270;
 
-const int maxCharactersOnPlate=8;
+const int maxCharactersOnPlate=7;
 
 double scale = 0.1;
 
@@ -91,6 +91,23 @@ string getErkennungsziffer(int maxLength)
     return actErkennungsziffer;
 }
 
+
+void copyMatToPosXY(Mat bigImage, Mat smallImage, int x, int y)
+{
+    Rect roi( Point( x, y ), cv::Size( smallImage.cols, smallImage.rows));
+    Mat destinationROI = bigImage( roi );
+    smallImage.copyTo( destinationROI );
+}
+
+
+Mat getBitmapForChar(char c)
+{
+    for (int i=0; i<characters.size();i++)
+    {
+	if (c==characters[i].character) return characters[i].imgScaled;
+    }
+}
+
 int main(int argc, char **argv) {
     
     string characterFilePath;
@@ -98,6 +115,8 @@ int main(int argc, char **argv) {
     string zulassungsbezirkFilePath;
     string configFilePath;
     string backgroundImgPath;
+    string imagesPath;
+  
     int images=-1;
    
     po::options_description options("Allowed options");
@@ -108,6 +127,7 @@ int main(int argc, char **argv) {
     ("zulassungsbezirkFile", po::value<string>(&zulassungsbezirkFilePath)->required(), "sets the path to the file containing the informations about the Zulassungsbezirke.")
     ("config,c", po::value<string>(&configFilePath)->default_value("config.ini"), "name of the configuration file")
     ("background,b", po::value<string>(&backgroundImgPath)->required(), "The image used as background, normally containing an empty licence plate.")
+    ("imageFolder", po::value<string>(&imagesPath)->required(), "The image used as background, normally containing an empty licence plate.")
     ("images,i", po::value<int>(&images)->required(), "The amount of images to be produced.")
     ;
 
@@ -197,17 +217,90 @@ int main(int argc, char **argv) {
     resize(imgBackground,imgBackground,Size(scale*widthNumberplate,scale*heightNumberplate));
     
     
+    //initialize Random numbers
+    srand( time(0) );
+    
+    //Create each Numberplate
     for(int i=0;i<images;i++)
     {
 	//Get the Zulassungsbezirk
 	string actZulassungsbezirk = zulassungsbezirke[rand() % zulassungsbezirke.size()];
 	string actErkennungsnummer = getErkennungsnummer();
-	string actErkennungsziffer = getErkennungsziffer(maxCharactersOnPlate-actZulassungsbezirk.length()-actErkennungsnummer.length());
+	int maxPossibleNumberDigits = maxCharactersOnPlate-actZulassungsbezirk.length()-actErkennungsnummer.length();
+	string actErkennungsziffer = getErkennungsziffer(maxPossibleNumberDigits);
 	
-	string actPlate = actZulassungsbezirk+"-"+actErkennungsnummer+" "+actErkennungsziffer;
+	string actPlate = actZulassungsbezirk+"-"+actErkennungsnummer+actErkennungsziffer;
 	
 	cout << actPlate<<endl;
+	
+	//OK, we have now everything we need and we can build up the Image
+	Mat img = imgBackground.clone();
+	
+	//Put the Zulassungsbezirk on it
+	int xCoordinate=45 + 80 + 450;  //Border + EU Bar + Space
+	int yCoordinate=45 + 130 ;  //black border + distance
+	
+	//First Letter
+	copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[0]),xCoordinate*scale,yCoordinate*scale);
+	
+	//Second letter
+	if (actZulassungsbezirk.size()>1)
+	{
+	    xCoordinate+=485;
+	    copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
+	}
+
+	//Third letter
+	if (actZulassungsbezirk.size()>2)
+	{
+	    xCoordinate+=485;
+	    copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[2]),xCoordinate*scale,yCoordinate*scale);
+	}
+	
+	//Spacer for Stamps
+	xCoordinate+=485+655;
+	
+	
+	//Erkennungsnummer
+	//First Letter
+	copyMatToPosXY(img,getBitmapForChar(actErkennungsnummer.c_str()[0]),xCoordinate*scale,yCoordinate*scale);
+
+	//Second letter
+	if (actErkennungsnummer.size()>1)
+	{
+	    xCoordinate+=485;
+	    copyMatToPosXY(img,getBitmapForChar(actErkennungsnummer.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
+	}
+	
+	
+	//Spacer between chars and digits
+	xCoordinate+=485 + 260;
+	
+	//Numbers are right aligned, so we have to calculate the position first
+	xCoordinate+=455*(maxPossibleNumberDigits-actErkennungsziffer.size());
+	
+	//First Digit
+	copyMatToPosXY(img,getBitmapForChar(actErkennungsziffer.c_str()[0]),xCoordinate*scale,yCoordinate*scale);
+	
+	//Second digit
+	if (actErkennungsziffer.size()>1)
+	{
+	    xCoordinate+=455;
+	    copyMatToPosXY(img,getBitmapForChar(actErkennungsziffer.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
+	}
+	
+	//Third digit
+	if (actErkennungsziffer.size()>2)
+	{
+	    xCoordinate+=455;
+	    copyMatToPosXY(img,getBitmapForChar(actErkennungsziffer.c_str()[2]),xCoordinate*scale,yCoordinate*scale);
+	}
+	
+	
+	imshow("LP", img);
+	waitKey(50);
+	
     }
-    
+    waitKey();
     return 0;
 }

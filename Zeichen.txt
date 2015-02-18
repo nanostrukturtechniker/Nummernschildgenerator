@@ -9,7 +9,7 @@
 8	8.png	false	true	true
 9	9.png	false	true	true
 A	A.png	false	false	true
-Ä	AE.png	true	false	true
+a	AE.png	true	false	true
 B	B.png	false	false	true
 C	C.png	false	false	true
 D	D.png	false	false	true
@@ -24,14 +24,14 @@ L	L.png	false	false	true
 M	M.png	false	false	true
 N	N.png	false	false	true
 O	O.png	false	false	true
-Ö	OE.png	true	false	true
+o	OE.png	true	false	true
 P	P.png	false	false	true
 Q	Q.png	false	false	true
 R	R.png	false	false	true
 S	S.png	false	false	true
 T	T.png	false	false	true
 U	U.png	false	false	true
-Ü	UE.png	true	false	true
+u	UE.png	true	false	true
 V	V.png	false	false	true
 W	W.png	false	false	true
 X	X.png	false	false	true
