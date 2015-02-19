@@ -22,6 +22,7 @@ class Character{
 };
 
 
+
 vector<Character> characters;
 vector<string> zulassungsbezirke;
 
@@ -43,6 +44,15 @@ const int widthSpacer=270;
 const int maxCharactersOnPlate=7;
 
 double scale = 0.1;
+
+
+template <typename T>
+string NumberToString ( T Number )
+{
+	stringstream ss;
+	ss << Number;
+	return ss.str();
+}
 
 
 string getCharWithoutUmlaut()
@@ -229,7 +239,7 @@ int main(int argc, char **argv) {
 	int maxPossibleNumberDigits = maxCharactersOnPlate-actZulassungsbezirk.length()-actErkennungsnummer.length();
 	string actErkennungsziffer = getErkennungsziffer(maxPossibleNumberDigits);
 	
-	string actPlate = actZulassungsbezirk+"-"+actErkennungsnummer+actErkennungsziffer;
+	string actPlate = actZulassungsbezirk+" "+actErkennungsnummer+actErkennungsziffer;
 	
 	cout << actPlate<<endl;
 	
@@ -239,6 +249,9 @@ int main(int argc, char **argv) {
 	//Put the Zulassungsbezirk on it
 	int xCoordinate=45 + 80 + 450;  //Border + EU Bar + Space
 	int yCoordinate=45 + 130 ;  //black border + distance
+	int additionalSpace=60;
+
+	
 	
 	//First Letter
 	copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[0]),xCoordinate*scale,yCoordinate*scale);
@@ -246,19 +259,25 @@ int main(int argc, char **argv) {
 	//Second letter
 	if (actZulassungsbezirk.size()>1)
 	{
-	    xCoordinate+=485;
+	    xCoordinate+=485+additionalSpace;
 	    copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
 	}
 
 	//Third letter
 	if (actZulassungsbezirk.size()>2)
 	{
-	    xCoordinate+=485;
+	    xCoordinate+=485+additionalSpace;
 	    copyMatToPosXY(img,getBitmapForChar(actZulassungsbezirk.c_str()[2]),xCoordinate*scale,yCoordinate*scale);
 	}
 	
 	//Spacer for Stamps
-	xCoordinate+=485+655;
+	xCoordinate+=485+additionalSpace +328;
+	
+	//Seal with 45mm diameter
+	circle(img,Point(xCoordinate*scale, img.rows * 0.65),225*scale, Scalar(rand()%256,rand()%256,rand()%256), -1);
+	
+	
+	xCoordinate+=328+additionalSpace;
 	
 	
 	//Erkennungsnummer
@@ -268,13 +287,13 @@ int main(int argc, char **argv) {
 	//Second letter
 	if (actErkennungsnummer.size()>1)
 	{
-	    xCoordinate+=485;
+	    xCoordinate+=485+additionalSpace;
 	    copyMatToPosXY(img,getBitmapForChar(actErkennungsnummer.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
 	}
 	
 	
 	//Spacer between chars and digits
-	xCoordinate+=485 + 260;
+	xCoordinate+=485 + 260+additionalSpace;
 	
 	//Numbers are right aligned, so we have to calculate the position first
 	xCoordinate+=455*(maxPossibleNumberDigits-actErkennungsziffer.size());
@@ -285,20 +304,23 @@ int main(int argc, char **argv) {
 	//Second digit
 	if (actErkennungsziffer.size()>1)
 	{
-	    xCoordinate+=455;
+	    xCoordinate+=455+additionalSpace;
 	    copyMatToPosXY(img,getBitmapForChar(actErkennungsziffer.c_str()[1]),xCoordinate*scale,yCoordinate*scale);
 	}
 	
 	//Third digit
 	if (actErkennungsziffer.size()>2)
 	{
-	    xCoordinate+=455;
+	    xCoordinate+=455+additionalSpace;
 	    copyMatToPosXY(img,getBitmapForChar(actErkennungsziffer.c_str()[2]),xCoordinate*scale,yCoordinate*scale);
 	}
 	
 	
 	imshow("LP", img);
-	waitKey(50);
+	
+	imwrite(imagesPath+NumberToString<int>(i)+".png",img);
+	
+	if (waitKey(50)==27) return 0;
 	
     }
     waitKey();
